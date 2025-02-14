@@ -55,7 +55,7 @@ class AudioManager:
             self.sounds[sound_name].set_volume(self.sound_volume * self.volume)
             self.sounds[sound_name].play()
         except KeyError:
-            warn("Sound not found")
+            warnings.warn("Sound not found")
 
     def play_music(self, music_name, loops=-1):
         try:
@@ -63,7 +63,7 @@ class AudioManager:
             pg.mixer.music.set_volume(self.music_volume * self.volume)
             pg.mixer.music.play(loops)
         except KeyError:
-            warn("Music not found")
+            warnings.warn("Music not found")
 
     def update(self):
         pass

@@ -24,7 +24,7 @@ class Utils:
             case 2:
                 pos -= np.array(dimensions, 'float64')
             case _:
-                warn('Invalid align value')
+                warnings.warn('Invalid align value')
         return pos
 
     @staticmethod
